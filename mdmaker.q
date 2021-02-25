@@ -14,7 +14,7 @@ if[not p `ap; @[hdel; p `floc; `NoFile]]
 file: hopen p `floc
 
 .z.pi: {
-    $["/" = first x; :neg[file] 2_x; "\\" ~ first 2#x; :exit 1];
+    $["/" = first x; :neg[file] 2_x; "\\\\" ~ first 2#x; :exit 1];
     neg[file] "```\n", x;
     show ans: @[value; x; `ERROR];
     if[count a: .Q.s ans; neg[file] "___OUTPUT___\n", a];
