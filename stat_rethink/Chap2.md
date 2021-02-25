@@ -102,3 +102,67 @@ ___OUTPUT___
 ```
 \\
 
+## 2M2
+
+```
+\l stat.q
+
+```
+```
+plist: .stat.seq . 100 0 1
+
+```
+```
+p2probs: plist >= 0.5
+
+```
+```
+p2probs
+
+___OUTPUT___
+00000000000000000000000000000000000000000000000000111111111111111111111111111..
+
+```
+```
+likelihood: .stat.binomp[;; plist]
+
+```
+```
+posterior: .stat.stdize p2probs * likelihood ::
+
+```
+```
+ppost: plist first idesc posterior ::
+
+```
+```
+ppost . 3 3
+
+___OUTPUT___
+1f
+
+```
+```
+ppost . 3 4
+
+___OUTPUT___
+0.7474747
+
+```
+```
+posterior . 3 3
+
+___OUTPUT___
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0..
+
+```
+```
+ppost . 5 7
+
+___OUTPUT___
+0.7171717
+
+```
+```
+\\
+
