@@ -21,5 +21,5 @@ file: hopen p `floc
     neg[file] "```";
     }
 
-.z.exit: {hclose file; 0N! "Saved session at ", string p `floc;}
+.z.exit: {neg[file] "```"; hclose file; 0N! "Saved session at ", string p `floc;}
 
