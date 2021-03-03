@@ -21,3 +21,6 @@ unifp: {c # 1 % c: count x}
 binomp: {ncr[y; x] * xexp[1 - z; y - x] * xexp[z; x]}
 
 stdize: {x % sum x}
+
+imax: {x? max x}
+imin: {x? min x}
