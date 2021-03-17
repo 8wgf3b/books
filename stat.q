@@ -37,7 +37,7 @@ imin: {x? min x}
 / x -> random variable
 / y -> probabilites
 / z -> size
-psr: {bin[;z?1.] x ! `s#sums y}
+psr: {bin[;z?1 + 1e-6] x ! `s#sums y}
 
 / x -> list
 / y -> quantile (<1)
@@ -57,3 +57,12 @@ HDPI: {
     b, c
     }
 
+/ (ab)ove (th)reshold
+/ x -> threshold
+/ y -> size
+abth: {sum x > y?1f}
+
+/ x -> trial size
+/ y -> number of trials
+/ z -> probability
+rbinom: {abth[;x] each y#z}
