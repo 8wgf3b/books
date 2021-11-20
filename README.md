@@ -6,5 +6,5 @@
 
 | Book | Language |
 |---|---|
-|[Statiscal Rethinking](stat_rethink)| kdb+/q|
+|[Statiscal Rethinking](stat_rethink)| kdb+/q; Jupyter|
 |[Funq](funq)| kdb+/q|
